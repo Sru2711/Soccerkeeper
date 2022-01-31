@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Cricket Score Keeper</title>
+<script>
+   function increaseA()
+   {
+    var a= parseInt(document.getElementById("btnscoreA").innerHTML);
+	a++;
+	document.getElementById("btnscoreA").innerHTML=a;
+	
+   }
+   function deccreaseA()
+   {
+    var a= parseInt(document.getElementById("btnscoreA").innerHTML);
+	if(a>0)
+	{a--;
+	document.getElementById("btnscoreA").innerHTML=a;
+	}
+   }
+   function increaseB()
+   {
+     var a= parseInt(document.getElementById("btnscoreB").innerHTML);
+	a++;
+	document.getElementById("btnscoreB").innerHTML=a;
+   }
+   
+   function deccreaseB()
+   {
+     var a= parseInt(document.getElementById("btnscoreB").innerHTML);
+	a--;
+	document.getElementById("btnscoreB").innerHTML=a;
+   }
+</script>
+<style>
+   body{
+     background-image:url('Cricket.jpg');
+     background-size:100% 100%;
+	 height:100vh;
+   }
+  .parent{ display:flex;
+           justify-content:space-around;
+         }
+  .child{background-image: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
+         border:2px black solid;
+		
+		 width:600px;
+		 height:400px;
+		 border-radius:30px 30px 30px 30px;
+		 margin:15px;
+		 padding:20px;
+		 box-shadow:0px 0px 20px #48b1f7 ;
+		 transition:0.4s;
+        } 
+  .h2{
+      text-align:center;
+	  font-size:40px;
+     } 
+  .btn{
+      height:70px;
+	  width:70px;
+	  font-size:50px;
+	  border-radius:20px 20px 20px 20px;
+	  margin-left:auto;
+	  margin-right:auto;
+	  display: block;
+        
+      } 
+  .score{
+	       text-align:center;
+		   font-size:30px;
+          }	
+  .image{
+         width:400px;
+		 height:400px;
+		 border-radius:20px 20px 20px 20px;
+		 
+        } 
+   .division{ height:300px;
+              width:300px;
+             background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% );
+            }   
+   .btn:hover{
+              box-shadow:0px 0px 20px #8130a1;
+             }
+   .child:hover{
+              box-shadow:0px 0px 50px #05dff7;
+             }
+   #h1{
+      text-align:center; 
+	  color:white; 
+	  background-color:#097099; 
+	  border-radius: 20px 20px 20px 20px;
+	  margin-top:30px
+      }
+</style>
+</head>
+<body>
+<h1 id="h1"> 🏏CRICKET SCORE KEEPER 🏏</h1>
+
+  <div class="parent">
+  
+    <div class="child">
+	
+	<h2 class="h2">Team A</h2>
+	<button id="btnInc" class="btn" onClick="increaseA()">+</button>
+	<h3 id="btnscoreA" class="score">0</h3>
+	<button id="btnDec" class="btn" onClick="deccreaseA()">-</button>
+	
+	
+	</div>
+	<div id="division" class="child">
+	
+	 <img src="India.png" class="image"></img>
+	 
+	</div>
+	<div class="child">
+	<h2 class="h2">Team B</h2>
+	<button id="bttnInc" class="btn" onClick="increaseB()" >+</button>
+	<h3 id="btnscoreB" class="score">0</h3>
+	<button id="bttnDec" class="btn" onClick="deccreaseB()">-</button>
+	
+	</div>
+</div>
+  
+</body>
+</html
